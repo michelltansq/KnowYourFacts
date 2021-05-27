@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             viewPager.setCurrentItem(randomPage, true);
         } else {
             int max = viewPager.getChildCount();
-            if (viewPager.getCurrentItem() < max-1){
+            if (viewPager.getCurrentItem() < max+1){
                 int nextPage = viewPager.getCurrentItem() + 1;
                 viewPager.setCurrentItem(nextPage, true);
             }
