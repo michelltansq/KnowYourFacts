@@ -4,19 +4,21 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.preference.PreferenceManager;
+//import androidx.preference.PreferenceManager;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.crazyhitty.chdev.ks.rssmanager.RssReader;
+//import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -75,7 +77,10 @@ public class MainActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(previousPage, true);
             }
         } else if (item_id == R.id.action_random) {
-
+            Random randomno = new Random();
+            int max = viewPager.getChildCount();
+            int randomPage = randomno.nextInt(max);
+            viewPager.setCurrentItem(randomPage, true);
         } else {
             int max = viewPager.getChildCount();
             if (viewPager.getCurrentItem() < max-1){
