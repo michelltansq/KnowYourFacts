@@ -1,5 +1,6 @@
 package com.myapplicationdev.android.knowyourfacts;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -8,6 +9,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     MyFragmentPagerAdapter adapter;
     ViewPager viewPager;
     Button btnRL;
+
 
     // Colour Palette: ffa3af, eafdcf, fffc99, bcd39c, b1f8f2
     @Override
@@ -55,6 +59,33 @@ public class MainActivity extends AppCompatActivity {
 
     }//end of onCreate
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.options, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int item_id = item.getItemId();
+
+        if (item_id == R.id.action_previous) {
+            if (viewPager.getCurrentItem() > 0){
+                int previousPage = viewPager.getCurrentItem() - 1;
+                viewPager.setCurrentItem(previousPage, true);
+            }
+        } else if (item_id == R.id.action_random) {
+
+        } else {
+            int max = viewPager.getChildCount();
+            if (viewPager.getCurrentItem() < max-1){
+                int nextPage = viewPager.getCurrentItem() + 1;
+                viewPager.setCurrentItem(nextPage, true);
+            }
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     protected void onPause() {
         super.onPause();
