@@ -82,18 +82,11 @@ public class MainActivity extends AppCompatActivity {
             int randomPage = randomno.nextInt(max);
             viewPager.setCurrentItem(randomPage, true);
         } else {
-            int max = viewPager.getChildCount();
-            if (viewPager.getCurrentItem() < max+1){
-                int nextPage = viewPager.getCurrentItem() + 1;
+            int nextPage = 0;
+            int currentPage = viewPager.getCurrentItem();
+            if (currentPage <= viewPager.getChildCount()){
+                nextPage = currentPage + 1;
                 viewPager.setCurrentItem(nextPage, true);
-
-                //int nextPage = 0;
-                //int currentPage = viewPager.getCurrentItem();
-                //if (currentPage <= viewPager.getChildCount()){
-                //    currentPage = currentPage + 1;
-                //    nextPage = currentPage + 1;
-                //    viewPager.setCurrentItem(nextPage, true);
-                //}
             }
         }
 
