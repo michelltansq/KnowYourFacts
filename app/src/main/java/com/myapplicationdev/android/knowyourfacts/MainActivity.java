@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
     Button btnRL;
 
-
+    // Colour Palette: ffa3af, eafdcf, fffc99, bcd39c, b1f8f2
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
