@@ -8,6 +8,8 @@
     android:padding="15dp"
     tools:context=".MainActivity" >
 
+    // Colour Palette: ffa3af, eafdcf, fffc99, bcd39c, b1f8f2
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
