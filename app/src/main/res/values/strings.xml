@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KnowYourFacts</string>
+    <string name="ReadLater">Read Later</string>
 </resources>
