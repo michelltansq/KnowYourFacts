@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-//import androidx.preference.PreferenceManager;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.SharedPreferences;
@@ -15,9 +14,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-//import com.crazyhitty.chdev.ks.rssmanager.RssReader;
+
+import com.crazyhitty.chdev.ks.rssmanager.RSS;
+import com.crazyhitty.chdev.ks.rssmanager.RssReader;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     Button btnRL;
 
 
-    // Colour Palette: ffa3af, eafdcf, fffc99, bcd39c, b1f8f2
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         fragments.add(new Frag3());
         fragments.add(new Frag4());
         fragments.add(new Frag5());
+        fragments.add(new FragRSS());
 
         adapter = new MyFragmentPagerAdapter(fm, fragments);
 
@@ -81,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
             int max = viewPager.getChildCount();
             int randomPage = randomno.nextInt(max);
             viewPager.setCurrentItem(randomPage, true);
-        } else {
+        } else if (item_id == R.id.action_next) {
             int nextPage = 0;
             int currentPage = viewPager.getCurrentItem();
-            if (currentPage <= viewPager.getChildCount()){
+            if (currentPage <= fragments.size()){
                 nextPage = currentPage + 1;
                 viewPager.setCurrentItem(nextPage, true);
             }
@@ -111,8 +113,6 @@ public class MainActivity extends AppCompatActivity {
         int lastPosition = prefs.getInt("lastPosition", 0);
         viewPager.setCurrentItem(lastPosition, false);
     }//end of onPause()
-
-
 
 
 }//end of class
