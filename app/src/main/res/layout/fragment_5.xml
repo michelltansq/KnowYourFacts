@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Frag5"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="#b1f8f2">
+
+    <TextView
+        android:id="@+id/tvF5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Three friends set the world record for completing the longest ever journey by taxi. They drove 43,319.5 miles in their 20-year-old black cab named “Hannah.” They drove across four continents and 50 countries generating a fare of £79,006.80. "/>
+    <Button
+        android:id="@+id/btnF5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Colour"/>
+
+</LinearLayout>

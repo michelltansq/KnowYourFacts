@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Frag4"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="#bcd39c">
+
+    <TextView
+        android:id="@+id/tvF4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Native Americans have been living in the multi-story adobe buildings of Taos Pueblo for over 1,000 years, making it the longest continuously inhabited place in the USA."/>
+    <Button
+        android:id="@+id/btnF4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Colour"/>
+
+</LinearLayout>

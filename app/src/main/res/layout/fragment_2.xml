@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Frag2"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="#eafdcf">
+
+    <TextView
+        android:id="@+id/tvF2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Randy Woodfield, the I-5 Serial Killer responsible for over 40 murders along Interstate 5 from 1980-81, was drafted into the NFL by the Green Bay Packers but was cut from the team after a series of indecent exposure arrests."/>
+    <Button
+        android:id="@+id/btnF2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Colour"/>
+
+</LinearLayout>
